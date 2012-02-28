@@ -20,5 +20,10 @@ tabs:
   #         - rails c
   #         - rails s
   # - logs: tail -f log/development.log
+  # - sidekiq:
+  #     layout: even-vertical
+  #     panes:
+  #         - redis-server
+  #         - sleep 5; sidekiq
   # - capistrano:
   # - server: ssh me@myhost

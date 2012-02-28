@@ -29,6 +29,29 @@ rescue LoadError => err
    puts "gem install awesome_print  # <-- highly recommended"
  end
 
+begin
+  require 'hirb'
+rescue LoadError
+  # Missing goodies, bummer
+end
+
+if defined? Hirb
+  # Dirty hack to support in-session Hirb.disable/enable
+  Hirb::View.instance_eval do
+    def enable_output_method
+      @output_method = true
+      Pry.config.print = proc do |output, value|
+        Hirb::View.view_or_page_output(value) || output.puts(value.ai)
+      end
+    end
+
+    def disable_output_method
+      Pry.config.print = proc { |output, value| output.puts(value.ai) }
+      @output_method = nil
+    end
+  end
+end
+
 # === CUSTOM COMMANDS ===
 # from: https://gist.github.com/1297510
 default_command_set = Pry::CommandSet.new do
