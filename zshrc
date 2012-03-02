@@ -35,8 +35,13 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 
-# Load RVM function
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+# Tmux Pair Programming commands
+alias tmux-host="tmux -S /tmp/tmux_host new-session -s Host -d && chmod 777 /tmp/tmux_host && tmux-attach"
+alias tmux-kill-host="tmux -S /tmp/tmux_host kill-server; rm /tmp/tmux_host"
+alias tmux-mirror="tmux -S /tmp/tmux_host a -t Host -r"
+alias tmux-pair="tmux -S /tmp/tmux_host new-session -t Host -s Client"
+alias tmux-attach="tmux -S /tmp/tmux_host a"
+
 # Load Tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 # Set Path to include rbenv and ClojureScript
