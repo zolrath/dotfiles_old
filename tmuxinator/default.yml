@@ -1,18 +1,18 @@
-# ~/.tmuxinator/projectname.yml
+# ~/.tmuxinator/pname.yml
 # you can make as many tabs as you wish...
 
-project_name: projectname
-project_root: ~/Code/projectname
-# rvm: ruby-1.9.3-p125-perf@projectname
+project_name: pname
+project_root: ~/Code/pname
+# rvm: ruby-1.9.3-p125-perf@pname
 # pre: sudo /etc/rc.d/mysqld start
 tabs:
   - editor:
       layout: main-vertical
       panes:
         - vim
-        - tork
         - git pull
-  - shell:
+        - tork
+  - shell: ls
   # - rails:
   #     layout: even-vertical
   #     panes:
@@ -20,6 +20,7 @@ tabs:
   #         - rails c
   #         - rails s
   # - logs: tail -f log/development.log
+  # - foreman: foreman
   # - sidekiq:
   #     layout: even-vertical
   #     panes:
