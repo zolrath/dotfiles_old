@@ -14,7 +14,7 @@ alias emacs="emacs -nw"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=( brew bundler extract furd gem git git-flow github heroku\
-          lein osx rails3 ruby rvm vagrant)
+          lein osx rails3 rbenv ruby vagrant)
 
 # Set to this to use case-sensitive completion # CASE_SENSITIVE="true"
 # Comment this out to disable weekly auto-update checks # DISABLE_AUTO_UPDATE="true"
@@ -39,8 +39,7 @@ export RUBY_HEAP_FREE_MIN=500000
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 # Load Tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-# Set Path to include ClojureScript and RVM
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/Users/furd/Code/clojurescript/bin:$HOME/.rvm/bin
+# Set Path to include rbenv and ClojureScript
+export PATH=$HOME/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/Users/furd/Code/clojurescript/bin
 # Load secrets to keep sensitive information out of version control.
 [[ -s "$HOME/.secrets" ]] && source "$HOME/.secrets"
-rvm use default
