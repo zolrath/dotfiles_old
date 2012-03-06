@@ -43,3 +43,4 @@ source ~/.tmux_host
 export PATH=$HOME/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/opt/local/bin:/usr/local/git/bin:/Users/furd/Code/clojurescript/bin
 # Load secrets to keep sensitive information out of version control.
 [[ -s "$HOME/.secrets" ]] && source "$HOME/.secrets"
+eval "$(rbenv init -)"
