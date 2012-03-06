@@ -2,7 +2,7 @@
 #
 # Simple tasks for managing my dot files and applications associated them.
 
-FILES_TO_LINK = %w{ackrc gemrc gitconfig gitignore pryrc rspec secrets tmux.conf tmuxinator zshenv zshrc}
+FILES_TO_LINK = %w{ackrc gemrc gitconfig gitignore powconfig pryrc rspec secrets tmux.conf tmux_host tmuxinator zshenv zshrc}
 
 namespace :dot do 
 
