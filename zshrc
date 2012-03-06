@@ -4,7 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # If you set this to "random", it'll load a random theme when oh-my-zsh is run.
-ZSH_THEME="soliah"
+ZSH_THEME="furd"
 
 # Aliases
 # alias zshconfig="mate ~/.zshrc"
