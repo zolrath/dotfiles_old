@@ -1,1 +1,2 @@
+# Add rbenv to pow path.
 export PATH=/Users/`whoami`/.rbenv/shims:/Users/`whoami`/.rbenv/bin:$PATH

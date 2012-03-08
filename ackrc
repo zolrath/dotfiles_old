@@ -1,7 +1,7 @@
 # lexically sort filenames
 --sort-files
 
---type-add=ruby=rake,haml
+--type-add=ruby=rake,haml,slim
 --type-add=vim=vimrc,vim
 --type-add=js=json
 --type-set=cucumber=feature
