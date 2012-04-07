@@ -54,8 +54,6 @@ alias gl="git smart-log"
 # ----------------------------------------
 # Tmux Related
 # ----------------------------------------
-# Set wemux mode to host.
-export WEMUX_HOST=true
 # Load Tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 # Function to let me set tmux title.
